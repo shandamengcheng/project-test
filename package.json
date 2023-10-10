@@ -1,0 +1,19 @@
+{
+  "name": "project-test",
+  "version": "1.0.0",
+  "description": "各种乱七八糟天马行空的代码测试场所",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shandamengcheng/project-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shandamengcheng/project-test/issues"
+  },
+  "homepage": "https://github.com/shandamengcheng/project-test#readme"
+}
