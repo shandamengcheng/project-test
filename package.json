@@ -4,7 +4,8 @@
   "description": "各种乱七八糟天马行空的代码测试场所",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "jest"
   },
   "repository": "git+https://github.com/shandamengcheng/project-test.git",
   "author": "shandamengcheng",
@@ -24,13 +25,14 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^4.3.8",
+    "jest": "^29.7.0",
     "lint-staged": "^14.0.1",
     "stylelint": "^15.10.3",
     "typescript": "^5.2.2"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "lint-staged & yarn test",
       "commit-msg": "npx --no-install commitlint --edit $1"
     }
   },
