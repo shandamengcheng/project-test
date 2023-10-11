@@ -32,7 +32,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged & yarn test",
+      "pre-commit": "lint-staged && yarn test",
       "commit-msg": "npx --no-install commitlint --edit $1"
     }
   },
