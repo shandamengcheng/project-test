@@ -4,16 +4,42 @@
   "description": "各种乱七八糟天马行空的代码测试场所",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shandamengcheng/project-test.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/shandamengcheng/project-test.git",
+  "author": "zhumengcheng <zhumengcheng@kuaishou.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shandamengcheng/project-test/issues"
   },
-  "homepage": "https://github.com/shandamengcheng/project-test#readme"
+  "homepage": "https://github.com/shandamengcheng/project-test#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^4.3.8",
+    "lint-staged": "^14.0.1",
+    "stylelint": "^15.10.3",
+    "typescript": "^5.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md}": [
+      "eslint --fix"
+    ],
+    "**/*.{less, css}": [
+      "stylelint --fix"
+    ]
+  }
 }
