@@ -7,7 +7,7 @@
     "prepare": "husky install"
   },
   "repository": "git+https://github.com/shandamengcheng/project-test.git",
-  "author": "zhumengcheng <zhumengcheng@kuaishou.com>",
+  "author": "shandamengcheng",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shandamengcheng/project-test/issues"
